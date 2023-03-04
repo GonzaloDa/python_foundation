@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>finder</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    </head>
+    <body>
+        <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS2RbB672nobns-OZRwIUecvBXNYZtZ0dALw&usqp=CAU>">
+        <br> 
+        <form action="search" method="post">
+            {% for message in get_flashed_messages()%}
+                <p> {{message}} </p>
+            {% endfor %}
+            <br>
+            <input type="text" event="event">
+            <br>
+            <input type="submit" value="SEARCH" id="search">
+        </form>
+    </body>
+</html>
